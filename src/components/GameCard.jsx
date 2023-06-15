@@ -13,11 +13,11 @@ const GameCard = ({ game, backgroundImage }) => {
       </div>
       <h4>{game.name}</h4>
       <p>Price: {game.price}</p>
-      {/* {game.onDisplay ? (
+      {game.onDisplay ? (
         <button className="primary">On Display</button>
       ) : (
         <button>Out of Display</button>
-      )} */}
+      )}
     </li>
   );
 };

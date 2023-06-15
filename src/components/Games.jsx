@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import GameCard from './GameCard';
+import '../App.css'
 
 const Games = () => {
   const [data, setData] = useState([]);
@@ -17,9 +18,9 @@ const Games = () => {
   return (
     <>
       <Header />
-      <div className="card-container">
+      <div className="card-container" style={{backgroundImage:`url(${background_jewel_url})`}} >
         {data.map((game) => (
-          <GameCard key={game.id} game={game} backgroundImage={background_jewel_url} />
+          <GameCard key={game.id} game={game}/>
         ))}
       </div>
     </>
