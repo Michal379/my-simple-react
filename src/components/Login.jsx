@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const Login = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [idPassport, setIdPassport] = useState('');
+
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const handleIdPassportChange = (e) => {
+    setIdPassport(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+  };
+
   return (
-<>
-<h2>Indidual Details</h2>
-<form>
-   <div>
+    <>
+      <h2>Individual Details</h2>
+      <form className='form' onSubmit={handleSubmit}>
+        <div>
           <label htmlFor="firstName">First Name:</label>
           <input type="text" id="firstName" value={firstName} onChange={handleFirstNameChange} />
         </div>
@@ -22,9 +48,9 @@ const Login = () => {
           <input type="text" id="idPassport" value={idPassport} onChange={handleIdPassportChange} />
         </div>
         <button type="submit">Submit</button>
-</form>
-</> 
- )
-}
+      </form>
+    </>
+  );
+};
 
-export default Login
+export default Login;

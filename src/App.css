@@ -62,20 +62,42 @@ button.primary {
   background-color: var(--green);
   color: white;
 }
-
 .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .card {
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  height: 350px;
 }
 
 .card img {
-  width: 100%;
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-.card button {
-  margin-top: 0.5rem;
+.form{
+  margin: 60px auto;
+  max-width: 700px;
+  padding: 0 20px;
+  background-color: #f4f4f4;    
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
+
 
