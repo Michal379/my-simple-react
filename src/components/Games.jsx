@@ -17,11 +17,11 @@ const Games = () => {
   return (
     <>
       <Header />
-      <ul className="cards">
+      <div className="card-container">
         {data.map((game) => (
           <GameCard key={game.id} game={game} backgroundImage={background_jewel_url} />
         ))}
-      </ul>
+      </div>
     </>
   );
 };

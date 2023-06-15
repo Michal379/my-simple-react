@@ -30,24 +30,24 @@ const Login = () => {
   return (
     <>
       <h2>Individual Details</h2>
-      <form className='form' onSubmit={handleSubmit}>
-        <div>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="form-group">
           <label htmlFor="firstName">First Name:</label>
           <input type="text" id="firstName" value={firstName} onChange={handleFirstNameChange} />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="lastName">Last Name:</label>
           <input type="text" id="lastName" value={lastName} onChange={handleLastNameChange} />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="phoneNumber">Identity:</label>
           <input type="text" id="phoneNumber" value={phoneNumber} onChange={handlePhoneNumberChange} />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="idPassport">Phone Number:</label>
           <input type="text" id="idPassport" value={idPassport} onChange={handleIdPassportChange} />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className="btn">Submit</button>
       </form>
     </>
   );
