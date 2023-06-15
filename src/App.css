@@ -37,6 +37,20 @@
   }
 }
 
+.header {
+  font-size: 2.5em;
+  font-weight: 900;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.logo {
+  font-size: 1.25em;
+  padding-left: 0.5rem;
+  color: transparent;
+  text-shadow: 0 0 0 var(--green);
+}
+
 button {
   padding: 0.25rem 1rem;
   font-family: inherit;
@@ -47,5 +61,21 @@ button {
 button.primary {
   background-color: var(--green);
   color: white;
+}
+
+.cards {
+  list-style: none;
+}
+
+.card {
+  margin: 1rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card button {
+  margin-top: 0.5rem;
 }
 
