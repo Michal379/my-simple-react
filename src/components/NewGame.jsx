@@ -29,7 +29,7 @@ const NewGame = ({ onAddGame }) => {
 
   return (
     <>
-      <h2>Game Details</h2>
+      <h2>New Game</h2>
       <form className="form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
