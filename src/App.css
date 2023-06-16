@@ -63,6 +63,8 @@ button.primary {
   color: white;
 }
 .card-container {
+  background-size: cover;
+  background-repeat: no-repeat;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
