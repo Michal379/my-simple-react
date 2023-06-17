@@ -1,10 +1,15 @@
 import React from 'react';
 
-const GameCard = ({ game, backgroundImage }) => {
-  const firstGame = game[0];
+const GameCard = ({ game, backgroundImage, onDelete }) => {
+  // const firstGame = game[0];
   const cardStyle = {
     backgroundImage: `url(${backgroundImage})`,
   };
+
+  const handleDelete = () => {
+    onDelete(game.id);
+  };
+  
 
   return (
     <li className="card" style={cardStyle}>
@@ -18,6 +23,7 @@ const GameCard = ({ game, backgroundImage }) => {
       ) : (
         <button>Out of Display</button>
       )}
+       <button onClick={handleDelete}>Delete</button>
     </li>
   );
 };

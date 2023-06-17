@@ -20,7 +20,7 @@ const Games = () => {
     const formData = new FormData();
     formData.append('name', newGame.name);
     formData.append('price', newGame.price);
-    formData.append('image', newGame.image);
+    formData.append('image_url', newGame.image);
   
     fetch('http://localhost:9292/games', {
       method: 'POST',
@@ -33,13 +33,28 @@ const Games = () => {
       .catch((error) => console.log(error));
   };
   
+  const handleDeleteGame = (gameId) => {
+    fetch(`http://localhost:9292/games/${gameId}`, {
+      method: 'DELETE',
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Remove the deleted game from the state
+          setData((prevGames) => prevGames.filter((game) => game.id !== gameId));
+        } else {
+          console.log('Failed to delete the game');
+        }
+      })
+      .catch((error) => console.log(error));
+  };
+  
   return (
     <>
       <Header />
       <NewGame onAddGame={handleAddGame} />
       <div className="card-container" style={{backgroundImage:`url(${background_jewel_url})`}} >
         {data.map((game) => (
-          <GameCard key={game.id} game={game}/>
+          <GameCard key={game.id} game={game}onDelete={handleDeleteGame}/>
         ))}
       </div>
     </>
